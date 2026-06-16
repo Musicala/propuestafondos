@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Musicala Aliados · Bienestar artístico para tu Fondo</title>
+  <meta name="description" content="Propuesta de bienestar artístico de Musicala Escuela de Artes para Fondos de Empleados: música, danza, teatro, artes visuales y grupos representativos." />
+
+  <!-- Tipografías de marca -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&family=Sacramento&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Sidebar izquierda -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="sidebar-logo">
+          <span class="sidebar-note">♪</span>
+        </div>
+        <div>
+          <div class="sidebar-name">Musicala</div>
+          <div class="sidebar-sub">Escuela de Artes</div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" id="sidebar-nav" aria-label="Navegación principal"></nav>
+      <div class="sidebar-footer">
+        <p class="sidebar-motto">El arte no tiene edad,<br><span>tiene propósito.</span></p>
+        <div class="sidebar-photo-wrap">
+          <img src="abuelos2.png" alt="Personas mayores disfrutando el arte" />
+        </div>
+      </div>
+    </aside>
+
+    <!-- Área principal -->
+    <div class="main-area">
+      <!-- Escenario de diapositivas -->
+      <main class="stage" id="stage" aria-live="polite"><!-- render dinámico --></main>
+
+      <!-- Barra de acciones -->
+      <footer class="actionbar">
+        <div class="nav-btns">
+          <button class="icon-btn" id="btn-prev" aria-label="Anterior" title="Anterior (←)">‹</button>
+          <button class="icon-btn" id="btn-next" aria-label="Siguiente" title="Siguiente (→)">›</button>
+        </div>
+        <div class="spacer"></div>
+        <div class="quick-actions">
+          <button class="chip chip--wa" id="act-whatsapp"><em>✆</em><span class="chip-label">WhatsApp</span></button>
+          <button class="chip" id="act-schedule"><em>📅</em><span class="chip-label">Agendar</span></button>
+          <button class="chip" id="act-copy"><em>🔗</em><span class="chip-label">Copiar link</span></button>
+          <button class="chip" id="act-print"><em>🖨</em><span class="chip-label">Imprimir</span></button>
+          <button class="chip" id="act-index"><em>☰</em><span class="chip-label">Índice</span></button>
+          <button class="chip" id="act-full"><em>⛶</em><span class="chip-label">Pantalla</span></button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Scrim + Drawer -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Índice y generador de enlaces">
+    <div class="drawer-head">
+      <h3>Propuesta</h3>
+      <button class="drawer-close" id="drawer-close" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="drawer-body">
+      <p class="drawer-section-label">Secciones</p>
+      <nav id="index-list"></nav>
+
+      <p class="drawer-section-label">Generar enlace personalizado</p>
+      <div class="lb">
+        <div>
+          <label for="lb-fondo">Nombre del Fondo</label>
+          <input id="lb-fondo" type="text" placeholder="Ej: Fonbienestar" />
+        </div>
+        <div>
+          <label for="lb-contacto">Contacto (opcional)</label>
+          <input id="lb-contacto" type="text" placeholder="Ej: Gestión Social" />
+        </div>
+        <div>
+          <label for="lb-tipo">Versión</label>
+          <select id="lb-tipo">
+            <option value="general">General · Fondos de Empleados</option>
+            <option value="senior">Senior · Pensionados</option>
+          </select>
+        </div>
+        <div>
+          <label for="lb-output">Enlace</label>
+          <div class="lb-output-wrap">
+            <input id="lb-output" type="text" readonly />
+          </div>
+        </div>
+        <div class="lb-actions">
+          <button class="btn btn--primary" id="lb-copy">Copiar</button>
+          <button class="btn btn--outline" id="lb-open">Abrir</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
