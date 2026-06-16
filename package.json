@@ -1,0 +1,16 @@
+{
+  "name": "mailing-fondos",
+  "version": "1.0.0",
+  "description": "Deck web (HTML + CSS + JavaScript puro, sin frameworks ni backend) para ofrecer los servicios de **Musicala Escuela de Artes** a **Fondos de Empleados**, con dos versiones:",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}
